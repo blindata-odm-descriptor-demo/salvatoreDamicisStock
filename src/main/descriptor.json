@@ -1,0 +1,19 @@
+{
+  "dataProductDescriptor" : "1.0.0",
+  "info" : {
+    "fullyQualifiedName" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisStock:1",
+    "domain" : "salvatoredamicisRetail",
+    "name" : "salvatoreDamicisStock",
+    "displayName" : "Salvatore Damicis Stock",
+    "description" : "Data Product that manages data about inventory, both the master data from the golden source and the real-time state computed for ecommerce channel. ",
+    "version" : "1.0.0",
+    "owner" : {
+      "id" : "salvatore.damicis@quantyca.it",
+      "name" : "Salvatore D'amicis"
+    }
+  },
+  "interfaceComponents" : {
+    "inputPorts" : [ ],
+    "outputPorts" : [ ]
+  }
+}
