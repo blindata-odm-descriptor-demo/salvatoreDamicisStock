@@ -108,5 +108,26 @@
         }
       }
     } ]
+  },
+  "internalComponents" : {
+    "lifecycleInfo" : {
+      "prod" : [ {
+        "name" : "release",
+        "order" : 1,
+        "service" : {
+          "$href" : "dummy-executor"
+        },
+        "template" : {
+          "name" : "release",
+          "specification" : "",
+          "specificationVersion" : "",
+          "definition" : { },
+          "description" : ""
+        },
+        "configurations" : {
+          "params" : { }
+        }
+      } ]
+    }
   }
 }
