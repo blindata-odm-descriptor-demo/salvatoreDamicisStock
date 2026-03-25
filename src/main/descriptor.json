@@ -10,10 +10,102 @@
     "owner" : {
       "id" : "salvatore.damicis@quantyca.it",
       "name" : "Salvatore D'amicis"
-    }
+    },
+    "contactPoints" : [ ]
   },
   "interfaceComponents" : {
-    "inputPorts" : [ ],
-    "outputPorts" : [ ]
+    "inputPorts" : [ {
+      "fullyQualifiedName" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisStock:1:inputports:siteDataProduct",
+      "name" : "siteDataProduct",
+      "version" : "1.0.0",
+      "displayName" : "Site Data Product",
+      "description" : "",
+      "promises" : {
+        "servicesType" : ""
+      },
+      "dependsOn" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisSiteAnag:1:outputports:dwh"
+    }, {
+      "fullyQualifiedName" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisStock:1:inputports:productDataProduct",
+      "name" : "productDataProduct",
+      "version" : "1.0.0",
+      "displayName" : "Product Data Product",
+      "description" : "",
+      "promises" : {
+        "servicesType" : ""
+      },
+      "dependsOn" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisProductAnag:1:outputports:dwh"
+    }, {
+      "fullyQualifiedName" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisStock:1:inputports:movementDataProduct",
+      "name" : "movementDataProduct",
+      "version" : "1.0.0",
+      "displayName" : "Movement Data Product ",
+      "description" : "",
+      "promises" : {
+        "servicesType" : ""
+      },
+      "dependsOn" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisMovement:1:outputports:dwh"
+    } ],
+    "outputPorts" : [ {
+      "fullyQualifiedName" : "urn:dpds:crifPlayground:dataproducts:salvatoreDamicisStock:1:outputports:dwh",
+      "name" : "dwh",
+      "version" : "1.0.0",
+      "displayName" : "dwh",
+      "description" : "",
+      "promises" : {
+        "platform" : "PostgreSQL:salvatoredamicis-dwh",
+        "api" : {
+          "fullyQualifiedName" : "",
+          "name" : "salvatoreDamicisStockdwhApi",
+          "version" : "1.0.0",
+          "specification" : "datastoreapi",
+          "specificationVersion" : "1.0.0",
+          "definition" : {
+            "schema" : {
+              "databaseSchemaName" : "cdm",
+              "tables" : [ {
+                "version" : "1.0.0",
+                "specification" : "json-schema",
+                "specificationVersion" : "1",
+                "definition" : {
+                  "name" : "ft_stock",
+                  "displayName" : "ft_stock",
+                  "description" : "",
+                  "physicalType" : "BASE_TABLE",
+                  "properties" : {
+                    "site_code" : {
+                      "name" : "site_code",
+                      "displayName" : "site_code",
+                      "physicalType" : "varchar",
+                      "description" : "",
+                      "ordinalPosition" : 1
+                    },
+                    "stock_qty" : {
+                      "name" : "stock_qty",
+                      "displayName" : "stock_qty",
+                      "physicalType" : "decimal",
+                      "description" : "",
+                      "ordinalPosition" : 2
+                    },
+                    "sku_id" : {
+                      "name" : "sku_id",
+                      "displayName" : "sku_id",
+                      "physicalType" : "integer",
+                      "description" : "",
+                      "ordinalPosition" : 3
+                    }
+                  },
+                  "s-context" : {
+                    "s-base" : "https://demo.blindata.io/logical/namespaces/name/salvatoredamicisRetail#",
+                    "s-type" : "[Stock]",
+                    "site_code" : "[Stock].refersTo[Site].siteCode",
+                    "stock_qty" : "[Stock].stockQuantity"
+                  }
+                }
+              } ]
+            }
+          }
+        }
+      }
+    } ]
   }
 }
