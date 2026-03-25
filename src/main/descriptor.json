@@ -98,7 +98,8 @@
                     "s-base" : "https://demo.blindata.io/logical/namespaces/name/salvatoredamicisRetail#",
                     "s-type" : "[Stock]",
                     "site_code" : "[Stock].refersTo[Site].siteCode",
-                    "stock_qty" : "[Stock].stockQuantity"
+                    "stock_qty" : "[Stock].stockQuantity",
+                    "sku_id" : "[Stock].refersTo[ProductSku].productSkuIdentifier"
                   }
                 }
               } ]
